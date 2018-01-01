@@ -1,6 +1,6 @@
 //import java.util.ArrayList;
 public class ArrayList<E> implements List<E> {
-    int size = 0;
+    private int size = 0;
     int capacity;
     Object[] elementData;
     public final int DEFAULT_CAPACITY = 10;
@@ -13,6 +13,26 @@ public class ArrayList<E> implements List<E> {
         this.capacity = size;
         elementData = new Object[capacity];
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    /**
+     * Sets element at the current index
+     * @param index
+     * @param e
+     */
+    public void set(int index, E e) {
+        if(index >=size || index < 0) {
+            System.out.println("Can't do it bro");
+        }
+        elementData[index] = e;
+    }
+    public void setCapacity(int size) {
+        this.capacity = size;
+    }
+
 
     @Override
     public int size() {
