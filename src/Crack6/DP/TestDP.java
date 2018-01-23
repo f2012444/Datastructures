@@ -4,8 +4,16 @@ import java.util.ArrayList;
 
 public class TestDP {
     public static void main(String[] args) {
-         Coins coins = new Coins();
-         System.out.println(coins.getNoWays(30));
+
+        EightQueens eq = new EightQueens();
+        boolean res = eq.check( 5);
+        System.out.println(res);
+
+
+
+//
+//        Coins coins = new Coins();
+//        System.out.println(coins.getNoWays(30));
 
 
 
